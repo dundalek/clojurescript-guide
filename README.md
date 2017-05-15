@@ -89,3 +89,15 @@ Explore other [books](https://clojure.org/community/books) by the community.
 - [4Clojure](http://www.4clojure.com/problems)
 - [Clojure Koans](http://clojurekoans.com/)
 - [Project Euler Problems](https://projecteuler.net/archives)
+
+## Cookbook
+
+### Libraries
+
+Frontend
+- React wrapper framework: [re-frame](https://github.com/Day8/re-frame)
+- HTTP library: [cljs-ajax](https://github.com/JulianBirch/cljs-ajax)
+- UI Components: [re-com](https://github.com/Day8/re-com)
+- Routing: [secretary](https://github.com/gf3/secretary)
+
+See other libraries on [Awesome ClojureScript](https://github.com/hantuzun/awesome-clojurescript) list.
