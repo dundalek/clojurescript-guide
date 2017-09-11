@@ -34,7 +34,6 @@ $ npm install -g lumo-cljs
 $ lumo
 cljs.user=> (println "hello clojure")
 hello clojure
-
 ```
 
 For Java first install [Leiningen](https://leiningen.org/) and then:
@@ -92,9 +91,9 @@ Browse [API documentation](https://clojuredocs.org/quickref) and refer to [Cheat
 
 - [Learn Clojure in Y minutes](http://learnxinyminutes.com/docs/clojure/) is a very concise indroduction to Clojure.
 - [ClojureScript Unraveled](http://funcool.github.io/clojurescript-unraveled/) is an online book and guide about ClojureScript.
-- [Brave Clojure - Chapter 3 Crash Course](http://www.braveclojure.com/do-things/)
+- [Brave Clojure – Chapter 3 Crash Course](http://www.braveclojure.com/do-things/)
   Clojure for the Brave and True is a book available online. I find chapter 3 a very good intro to Clojure. If you like more chatty style and humor in programming books then also give a read to other chapters.
-- [Clojure - Functional Programming for the JVM](http://java.ociweb.com/mark/clojure/article.html) is an introductory article to functional programming and Clojure. It is aimed for Java programmers but contains interesting bits of information and goes into more low-level details.
+- [Clojure – Functional Programming for the JVM](http://java.ociweb.com/mark/clojure/article.html) is an introductory article to functional programming and Clojure. It is aimed for Java programmers but contains interesting bits of information and goes into more low-level details.
 - [Clojure from the ground up](https://aphyr.com/tags/Clojure-from-the-ground-up) is a collection of articles on various Clojure topics.
 
 ### Books
@@ -190,7 +189,7 @@ To print at ClojureScript REPL
 (println "Hello, world!")
 ```
 
-Working with filesystem - require `fs` from node and call native functions.
+Working with filesystem – require `fs` from node and call native functions.
 ```clojure
 (def fs (js/require "fs"))
 (fs.readFileSync "foo.txt" "utf8")
@@ -220,6 +219,7 @@ EDN is to Clojure what JSON is to Javascript.
 ## Editor setup
 
 **[Atom](https://atom.io)**
+
 Refer to [this guide](https://gist.github.com/jasongilman/d1f70507bed021b48625) for a good setup. Essential packages are:
 - [parinfer](https://atom.io/packages/parinfer) so that you don't have to worry about parentheses
 - [proto-repl](https://atom.io/packages/proto-repl) to evaluate code right within editor window
@@ -257,21 +257,21 @@ Trace calls with [Clairvoyant](https://github.com/spellhouse/clairvoyant) which 
 ## Tools
 
 **Code quality**
-- [kibit](https://github.com/jonase/kibit) - static analysis tool that offers suggestions for code improvement
-- [lein-ancient](https://github.com/xsc/lein-ancient) - check and upgrade outdated dependencies in your project
-- [cljformat](https://github.com/weavejester/cljfmt) or [lein-zprint](https://github.com/kkinnear/lein-zprint) or  [boot-fmt](https://github.com/pesterhazy/boot-fmt) for code auto-formatting
+- [kibit](https://github.com/jonase/kibit) – static analysis tool that offers suggestions for code improvement
+- [lein-ancient](https://github.com/xsc/lein-ancient) – check and upgrade outdated dependencies in your project
+- [cljfmt](https://github.com/weavejester/cljfmt) or [lein-zprint](https://github.com/kkinnear/lein-zprint) or  [boot-fmt](https://github.com/pesterhazy/boot-fmt) for code auto-formatting
 
 **Code exploration**
-- [lein-ns-dep-graph](https://github.com/hilverd/lein-ns-dep-graph) - Explore and visualize namespace dependencies
-- [lein-gossip](https://github.com/actsasgeek/lein-gossip) - Visualize call-graphs in a codebase
-- [lein-instant-cheatsheet](https://github.com/cammsaul/lein-instant-cheatsheet) - Instant Cheatsheet instantly creates a cheatsheet for your project and its dependencies
+- [lein-ns-dep-graph](https://github.com/hilverd/lein-ns-dep-graph) – Explore and visualize namespace dependencies
+- [lein-gossip](https://github.com/actsasgeek/lein-gossip) – Visualize call-graphs in a codebase
+- [lein-instant-cheatsheet](https://github.com/cammsaul/lein-instant-cheatsheet) – Instant Cheatsheet instantly creates a cheatsheet for your project and its dependencies
 
 ## Misc
 
-[CrossClj](https://crossclj.info/) - Explore dependencies of Clojure packages among each other, see which function are called where and with what arguments:
+[CrossClj](https://crossclj.info/) – Explore dependencies of Clojure packages among each other, see which function are called where and with what arguments:
 
 Bootstrapping:
-- [calvin](https://github.com/eginez/calvin) - A minimalistic build tool for ClojureScript projects that does not require the JVM
+- [calvin](https://github.com/eginez/calvin) – A minimalistic build tool for ClojureScript projects that does not require the JVM
 - [with Lumo](https://anmonteiro.com/2017/02/compiling-clojurescript-projects-without-the-jvm/)
 
 Articles about Lisp:
