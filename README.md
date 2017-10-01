@@ -256,10 +256,26 @@ Trace calls with [Clairvoyant](https://github.com/spellhouse/clairvoyant) which 
 
 ## Tools
 
+### Leiningen
+
+To use plugins globally across projects put them in `~/.lein/profiles.clj`, e.g.
+```clojure
+{:user {:plugins [[lein-ancient "0.6.5"]
+                  [lein-plz "0.4.0-SNAPSHOT" :exclusions [[rewrite-clj] [ancient-clj]]]]}}
+```
+
+[List of Leiningen plugins](https://github.com/technomancy/leiningen/wiki/Plugins)
+
+**Packages management**
+- `lein search <pkg-name>` – Search for packages
+- `lein plz add <pkg-name>` – Add package as dependency into `project.clj`
+- `lein ancient` – List outdated dependencies
+- `lein ancient upgrade`  –  Upgrade outdated dependencies
+
 **Code quality**
 - [kibit](https://github.com/jonase/kibit) – static analysis tool that offers suggestions for code improvement
-- [lein-ancient](https://github.com/xsc/lein-ancient) – check and upgrade outdated dependencies in your project
 - [cljfmt](https://github.com/weavejester/cljfmt) or [lein-zprint](https://github.com/kkinnear/lein-zprint) or  [boot-fmt](https://github.com/pesterhazy/boot-fmt) for code auto-formatting
+- [Overview of code quality tools](https://blog.jeaye.com/2017/08/31/clojure-code-quality/)
 
 **Code exploration**
 - [lein-ns-dep-graph](https://github.com/hilverd/lein-ns-dep-graph) – Explore and visualize namespace dependencies
