@@ -288,6 +288,19 @@ To use plugins globally across projects put them in `~/.lein/profiles.clj`, e.g.
 - [lein-gossip](https://github.com/actsasgeek/lein-gossip) or [clj-usage-graph](https://github.com/gfredericks/clj-usage-graph) – Visualize call-graphs in a codebase
 - [lein-instant-cheatsheet](https://github.com/cammsaul/lein-instant-cheatsheet) – Instant Cheatsheet instantly creates a cheatsheet for your project and its dependencies
 
+**Documentation generators**
+
+Recommended:
+- [cljdoc](https://cljdoc.xyz/) – documentation generator, includes hosting
+- [codeina](https://github.com/funcool/codeina) – api doc generator which is a nicer looking fork of codox
+- [codox](https://github.com/weavejester/codox) – with support for plugins and themes
+  - [codox-md](https://github.com/hugoduncan/codox-md)
+- [marginalia](https://github.com/gdeer81/lein-marginalia)  – documentation showing description and code side by side in a literate programming style
+
+Others:
+- [autodoc](https://github.com/tomfaulhaber/lein-autodoc) – generator that is used for official Clojure API docs
+- [cadastre](https://github.com/dakrone/cadastre) – extracts metadata in a way that is used on [clojuredocs.org](http://clojuredocs.org/)
+
 ## Misc
 
 [CrossClj](https://crossclj.info/) – Explore dependencies of Clojure packages among each other, see which function are called where and with what arguments:
