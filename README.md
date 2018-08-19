@@ -220,6 +220,18 @@ EDN is to Clojure what JSON is to Javascript.
 - parse: [cljs.reader/read-string](https://cljs.github.io/api/cljs.reader/read-string)
 - stringify: [prn-str](http://cljs.github.io/api/cljs.core/prn-str)
 
+### State
+
+A state is the value of an identity at a point in time.
+
+Changes to shared state:
+Refs - coordinated synchronous
+Atoms - uncoordinated synchronous
+Agents - asynchronous
+Vars - thread-local private - def, defn
+
+Convention dynamic thread-wide bindings with asterisks `*in*` `*out*`.
+
 ## Editor setup
 
 **[Atom](https://atom.io)**
