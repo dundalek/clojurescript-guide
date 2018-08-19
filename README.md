@@ -57,11 +57,11 @@ Watch and recompile on changes: `lein cljsbuild auto main`
 #### Web app
 
 Use [re-frame](https://github.com/Day8/re-frame-template) template which uses React.js via [Reagent](https://github.com/reagent-project/reagent) under the hood:
-`lein new re-frame <project-name> +test`
+`lein new re-frame <project-name> +test +routes +aliases`
 
-Start development mode with live reload: `lein figwheel dev`
+Start development mode with live reload: `lein dev`
 
-Compile the project: `lein cljsbuild once main`
+Compile the project: `lein build`
 
 ## Documentation
 
@@ -116,7 +116,7 @@ Explore other [books](https://clojure.org/community/books) by the community.
 
 ### Libraries
 
-Opinionated list of useful libraries. There are alternatives but if you are just starting you can't get wrong by picking these.
+Opinionated list of useful libraries. There are alternatives but if you are just starting you can't go wrong by picking these.
 
 **Frontend**
 - React wrapper framework: [re-frame](https://github.com/Day8/re-frame)
@@ -181,6 +181,10 @@ Use node modules by [seamlessly requiring](https://clojurescript.org/news/2017-0
 
 (js/console.log (renderToString (createElement "div" nil "Hello World!")))
 ```
+
+Some js libraries do not work with the compiler. In that case it is possible to bundle them with  [webpack](https://github.com/roman01la/cljs-reagent-webpack).
+Or use externs: https://code.thheller.com/blog/shadow-cljs/2017/10/15/externs-the-bane-of-every-release-build.html
+Debug advanced compilation errors with [:pseudo-names](https://clojurescript.org/reference/compiler-options#pseudo-names). Also try [:infer-externs](https://clojurescript.org/reference/compiler-options#infer-externs).
 
 ### IO
 
@@ -271,15 +275,17 @@ To use plugins globally across projects put them in `~/.lein/profiles.clj`, e.g.
 - `lein plz add <pkg-name>` – Add package as dependency into `project.clj`
 - `lein ancient` – List outdated dependencies
 - `lein ancient upgrade`  –  Upgrade outdated dependencies
+- [lein try](https://github.com/rkneufeld/lein-try) – Try out Clojure libraries in a REPL without creating a project or adding them to an existing project.
 
 **Code quality**
 - [kibit](https://github.com/jonase/kibit) – static analysis tool that offers suggestions for code improvement
 - [cljfmt](https://github.com/weavejester/cljfmt) or [lein-zprint](https://github.com/kkinnear/lein-zprint) or  [boot-fmt](https://github.com/pesterhazy/boot-fmt) for code auto-formatting
+- [cloverage](https://github.com/cloverage/cloverage) – Test code coverage tool
 - [Overview of code quality tools](https://blog.jeaye.com/2017/08/31/clojure-code-quality/)
 
 **Code exploration**
-- [lein-ns-dep-graph](https://github.com/hilverd/lein-ns-dep-graph) – Explore and visualize namespace dependencies
-- [lein-gossip](https://github.com/actsasgeek/lein-gossip) – Visualize call-graphs in a codebase
+- [lein-ns-dep-graph](https://github.com/hilverd/lein-ns-dep-graph) or [lein-hiera](https://github.com/greglook/lein-hiera) – Explore and visualize namespace dependencies
+- [lein-gossip](https://github.com/actsasgeek/lein-gossip) or [clj-usage-graph](https://github.com/gfredericks/clj-usage-graph) – Visualize call-graphs in a codebase
 - [lein-instant-cheatsheet](https://github.com/cammsaul/lein-instant-cheatsheet) – Instant Cheatsheet instantly creates a cheatsheet for your project and its dependencies
 
 ## Misc
@@ -290,6 +296,10 @@ Bootstrapping:
 - [calvin](https://github.com/eginez/calvin) – A minimalistic build tool for ClojureScript projects that does not require the JVM
 - [with Lumo](https://anmonteiro.com/2017/02/compiling-clojurescript-projects-without-the-jvm/)
 
-Articles about Lisp:
+Articles about Lisp and Functional Programming:
+- https://gist.github.com/reborg/dc8b0c96c397a56668905e2767fd697f
 - http://www.paulgraham.com/icad.html
 - https://funcall.blogspot.cz/2009/03/not-lisp-again.html
+- http://www.michaelnielsen.org/ddi/lisp-as-the-maxwells-equations-of-software/
+- http://www.lihaoyi.com/post/WhatsFunctionalProgrammingAllAbout.html
+- http://www.cs.umd.edu/~nau/cmsc421/norvig-lisp-style.pdf
