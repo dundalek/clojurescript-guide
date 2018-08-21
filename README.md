@@ -85,6 +85,7 @@ Browse [API documentation](https://clojuredocs.org/quickref) and refer to [Cheat
 - [Official Clojure Reference](https://clojure.org/reference/reader)
 - [Library Coding Standards](https://dev.clojure.org/display/community/Library+Coding+Standards)
 - [Clojure Styleguide](https://github.com/bbatsov/clojure-style-guide)
+- [clojure-doc.org](http://clojure-doc.org/articles/content.html) is community-driven documentation
 - [Anki deck](https://ankiweb.net/shared/info/3248915342) for spaced-repetition learning
 
 ### Tutorials
@@ -225,10 +226,10 @@ EDN is to Clojure what JSON is to Javascript.
 A state is the value of an identity at a point in time.
 
 Changes to shared state:
-Refs - coordinated synchronous
-Atoms - uncoordinated synchronous
-Agents - asynchronous
-Vars - thread-local private - def, defn
+- Refs - coordinated synchronous
+- Atoms - uncoordinated synchronous
+- Agents - asynchronous
+- Vars - thread-local private - def, defn
 
 Convention dynamic thread-wide bindings with asterisks `*in*` `*out*`.
 
@@ -243,6 +244,7 @@ Refer to [this guide](https://gist.github.com/jasongilman/d1f70507bed021b48625) 
 **[Spacemacs](http://spacemacs.org/)**
 - Emacs distribution with Vim mode
 - Looks intriguing, it's on my list of things to try
+- Plugin for code refactoring: [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki)
 
 **[Cursive](https://cursive-ide.com/)**
 - a great IDE based on IntelliJ
@@ -272,9 +274,7 @@ Trace calls with [Clairvoyant](https://github.com/spellhouse/clairvoyant) which 
 
 ## Tools
 
-### Leiningen
-
-To use plugins globally across projects put them in `~/.lein/profiles.clj`, e.g.
+To use Leiningen plugins globally across projects put them in `~/.lein/profiles.clj`, e.g.
 ```clojure
 {:user {:plugins [[lein-ancient "0.6.5"]
                   [lein-plz "0.4.0-SNAPSHOT" :exclusions [[rewrite-clj] [ancient-clj]]]]}}
@@ -293,6 +293,7 @@ To use plugins globally across projects put them in `~/.lein/profiles.clj`, e.g.
 - [kibit](https://github.com/jonase/kibit) – static analysis tool that offers suggestions for code improvement
 - [cljfmt](https://github.com/weavejester/cljfmt) or [lein-zprint](https://github.com/kkinnear/lein-zprint) or  [boot-fmt](https://github.com/pesterhazy/boot-fmt) for code auto-formatting
 - [cloverage](https://github.com/cloverage/cloverage) – Test code coverage tool
+- [vanity](https://github.com/dgtized/lein-vanity) - Compute Lines of code statistics
 - [Overview of code quality tools](https://blog.jeaye.com/2017/08/31/clojure-code-quality/)
 
 **Code exploration**
@@ -317,6 +318,9 @@ Others:
 
 [CrossClj](https://crossclj.info/) – Explore dependencies of Clojure packages among each other, see which function are called where and with what arguments:
 
+[JavaScript to ClojureScript translator](https://github.com/roman01la/javascript-to-clojurescript)
+
+
 Bootstrapping:
 - [calvin](https://github.com/eginez/calvin) – A minimalistic build tool for ClojureScript projects that does not require the JVM
 - [with Lumo](https://anmonteiro.com/2017/02/compiling-clojurescript-projects-without-the-jvm/)
@@ -325,6 +329,7 @@ Articles about Lisp and Functional Programming:
 - https://gist.github.com/reborg/dc8b0c96c397a56668905e2767fd697f
 - http://www.paulgraham.com/icad.html
 - https://funcall.blogspot.cz/2009/03/not-lisp-again.html
+- http://calculist.org/blog/2012/04/17/homoiconicity-isnt-the-point/
 - http://www.michaelnielsen.org/ddi/lisp-as-the-maxwells-equations-of-software/
 - http://www.lihaoyi.com/post/WhatsFunctionalProgrammingAllAbout.html
 - http://www.cs.umd.edu/~nau/cmsc421/norvig-lisp-style.pdf
