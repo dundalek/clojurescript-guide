@@ -3,6 +3,12 @@
 
 When I started with ClojureScript and tried to follow the official [Quick Start Guide](https://clojurescript.org/guides/quick-start) it did not seem very straightforward to me. It is a good read though after a bit of hands on experience. This guide is a compilation of things I wished to know at the beginnings.
 
+> ⚠ **DISCLAIMER**  
+> I wrote down these notes as I was learning Clojure/Script in 2017. The tooling ecosystem changed significantly since then, but I did not manage to update the guide to reflect that. Here is the gist:
+> * [Clojure CLI](https://clojure.org/guides/deps_and_cli) is a better alternative to Leiningen
+> * [shadow-cljs](https://github.com/thheller/shadow-cljs) is the best tool to compile ClojureScript replacing Fighweel, both for web and node.js apps
+> * [Babashka](https://github.com/babashka/babashka) is a best runtime for scripting instead of Lumo
+
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Quick Start](#quick-start)
